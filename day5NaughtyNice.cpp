@@ -27,10 +27,10 @@ int naughtyOrNice(vector<string> inputs) {
       prevLetter = c;
     }
 
-    if (inputs[i].find('ab') ||
-        inputs[i].find('cd') ||
-        inputs[i].find('pq') ||
-        inputs[i].find('xy')) {
+    if (inputs[i].find("ab") ||
+        inputs[i].find("cd") ||
+        inputs[i].find("pq") ||
+        inputs[i].find("xy")) {
       hasBadStrings = true;
     }
 
@@ -46,7 +46,7 @@ int naughtyOrNice(vector<string> inputs) {
 
 int main() {
   vector<string> v;
-  v.push_back("ugknbfddgicrmopn");
+  v.push_back("jchzalrnumimnmhp");
   cout << naughtyOrNice(v) << endl;
   return 0;
 }
