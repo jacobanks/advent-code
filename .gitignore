@@ -1,2 +1,3 @@
 *.DS_Store
-*.o
+/floorNumber
+/squareFeet
