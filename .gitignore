@@ -1,2 +1,2 @@
-*.DSStore
-*.o
+.DS_Store
+.o
