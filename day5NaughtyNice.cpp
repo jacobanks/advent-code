@@ -2,6 +2,8 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -27,10 +29,10 @@ int naughtyOrNice(vector<string> inputs) {
       prevLetter = c;
     }
 
-    if (inputs[i].find("ab") ||
-        inputs[i].find("cd") ||
-        inputs[i].find("pq") ||
-        inputs[i].find("xy")) {
+    if (inputs[i].find("ab") != string::npos ||
+        inputs[i].find("cd") != string::npos||
+        inputs[i].find("pq") != string::npos ||
+        inputs[i].find("xy") != string::npos) {
       hasBadStrings = true;
     }
 
@@ -45,8 +47,18 @@ int naughtyOrNice(vector<string> inputs) {
 }
 
 int main() {
-  vector<string> v;
-  v.push_back("jchzalrnumimnmhp");
-  cout << naughtyOrNice(v) << endl;
+  vector<string> input;
+  input.push_back("dvszwmarrgswjxmb");
+
+  // vector<string> input;
+  // ifstream in("day5Input.txt");
+  // string line;
+  // while(getline(in, line)) {
+  //   input.push_back(line);
+  // }
+
+  cout << "There are " << naughtyOrNice(input) << " nice strings" << endl;
+
+
   return 0;
 }
