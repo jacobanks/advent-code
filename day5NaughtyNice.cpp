@@ -48,14 +48,12 @@ int naughtyOrNice(vector<string> inputs) {
 
 int main() {
   vector<string> input;
-  input.push_back("dvszwmarrgswjxmb");
+  ifstream in("day5Input.txt");
+  string line;
 
-  // vector<string> input;
-  // ifstream in("day5Input.txt");
-  // string line;
-  // while(getline(in, line)) {
-  //   input.push_back(line);
-  // }
+  while(getline(in, line)) {
+    input.push_back(line);
+  }
 
   cout << "There are " << naughtyOrNice(input) << " nice strings" << endl;
 
